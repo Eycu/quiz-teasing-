@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — L'Art du Teasing | Nosimpszone</title>
+<meta name="description" content="Découvre ton profil de séducteur et reçois ton programme personnalisé gratuit.">
+<meta property="og:title" content="Quiz — L'Art du Teasing | Nosimpszone">
+<meta property="og:description" content="15 questions pour identifier ton blocage réel et recevoir ton programme personnalisé.">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <p class="brand">Nosimpszone</p>
+    <div class="brand-separator"></div>
+  </header>
+
+  <!-- INTRO -->
+  <div id="screen-intro" class="screen active">
+    <span class="intro-label">Programme Personnalisé</span>
+    <h1 class="intro-title">L'Art du<br><em>Teasing</em></h1>
+    <p class="intro-subtitle">Quel type es-tu vraiment ?</p>
+    <div class="intro-divider"></div>
+    <p class="intro-desc">
+      Ce quiz analyse tes <strong>blocages réels</strong> dans la séduction.<br>
+      En 15 questions, découvre ton profil et reçois un <strong>programme personnalisé</strong> conçu exactement pour toi.
+    </p>
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-num">15</span>
+        <span class="stat-label">Questions</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">6</span>
+        <span class="stat-label">Profils</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3<small>min</small></span>
+        <span class="stat-label">Durée</span>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="startQuiz()">Découvrir mon profil</button>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="screen-quiz" class="screen">
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span class="progress-label">Progression</span>
+        <span class="progress-count" id="progress-count">1 / 15</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+    <p class="bloc-label" id="bloc-label"></p>
+    <h2 class="question-text" id="question-text"></h2>
+    <div class="options" id="options-container"></div>
+    <div class="nav-row">
+      <button class="btn-ghost" id="btn-prev" onclick="prevQuestion()">← Retour</button>
+      <button class="btn-next" id="btn-next" onclick="nextQuestion()">Continuer →</button>
+    </div>
+  </div>
+
+  <!-- LOADING -->
+  <div id="screen-loading" class="screen">
+    <p class="loading-title">Analyse en cours...</p>
+    <p class="loading-sub">Nous construisons ton profil</p>
+    <div class="loading-bar-wrap">
+      <div class="loading-bar"></div>
+    </div>
+    <p class="loading-text">Identification du profil</p>
+  </div>
+
+  <!-- RESULT -->
+  <div id="screen-result" class="screen">
+    <p class="result-eyebrow">Ton profil dominant</p>
+    <h2 class="result-profile-name" id="result-name"></h2>
+    <p class="result-tagline" id="result-tagline"></p>
+    <div class="result-divider"></div>
+    <div class="result-diag-box">
+      <p class="result-diag-label">Diagnostic</p>
+      <p class="result-diag-text" id="result-diag"></p>
+    </div>
+    <p class="result-cta-label">Ton programme personnalisé t'attend ↓</p>
+    <a id="result-link" href="#" class="btn-download" target="_blank">Accéder à mon programme</a>
+    <p class="result-note">PDF · Accès immédiat · Google Drive</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>© 2025 <span>Nosimpszone</span> — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="quiz.js"></script>
+</body>
+</html>
